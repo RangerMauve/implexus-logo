@@ -50,5 +50,5 @@
 	</g>
 	<circle class="outline" cx="128" cy="128" r="120" />
 	<rect class="title-container" width="80" height="22" x="88" y="116" rx="1" ry="1"/>
-	<text class="title"x="128" y="132">implexus</text>
+	<text class="title" x="128" y="132">implexus</text>
 </svg>
