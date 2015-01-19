@@ -37,12 +37,12 @@
 	</style>
 	<defs>
 		<clipPath id="orb_outline">
-			<circle r="32" />
+			<circle r="38"/>
 		</clipPath>
-		<g id="orb" transform="translate(128 48)">
-			<circle class="orb" r="32" />
+		<g id="orb" transform="translate(128 40)">
+			<circle class="orb" r="40" />
 			<circle class="orb orb-outline" r="16" cy="32" clip-path="url(#orb_outline)" />
-			<circle class="orb-outline" r="32" />
+			<circle class="orb-outline" r="38" />
 		</g>
 	</defs>
 	<g>
@@ -54,16 +54,16 @@
 		<use xlink:href="#orb" transform="rotate(90 128 128)" />
 		<use xlink:href="#orb" transform="rotate(180 128 128)" />
 		<use xlink:href="#orb" transform="rotate(270 128 128)" />
-		<g transform="rotate(0 128 128) translate(128 52)">
+		<g transform="rotate(0 128 128) translate(128 43)">
 			<text class="message" x="0" y="0">I</text>
 		</g>
-		<g transform="rotate(90 128 128) translate(128 52)">
+		<g transform="rotate(90 128 128) translate(128 43)">
 			<text class="message" x="0" y="0">II</text>
 		</g>
-		<g transform="rotate(180 128 128) translate(128 52)">
+		<g transform="rotate(180 128 128) translate(128 43)">
 			<text class="message" x="0" y="0">III</text>
 		</g>
-		<g transform="rotate(270 128 128) translate(128 52)">
+		<g transform="rotate(270 128 128) translate(128 43)">
 			<text class="message" x="0" y="0">IV</text>
 		</g>
 	</g>
