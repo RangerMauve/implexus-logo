@@ -6,7 +6,7 @@ The logo for the Implexus project.
 Animated SVG
 ------------
 
-![SVG logo](logo.svg)
+![SVG logo](https://cdn.rawgit.com/RangerMauve/implexus-logo/master/logo.svg)
 
 Static PNG
 ----------
