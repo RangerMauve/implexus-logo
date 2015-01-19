@@ -1,7 +1,7 @@
 implexus-logo
 =============
 
-The logo for the Implexus project.
+The logo for the [implexus](https://github.com/RangerMauve/implexus-core) project.
 
 Animated SVG
 ------------
