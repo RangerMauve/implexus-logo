@@ -1,31 +1,44 @@
 <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" width="256" height="256">
 	<style type="text/css">
+		text {
+			font-family: Helvetica;
+		}
 		.orb,
 		.outline,
-		.inner {
+		.inner,
+		.title-container {
 			stroke: black;
 		}
 		.outline {
 			fill: none;
 		}
-		.orb {
+		.orb,
+		.inner,
+		.title-container {
 			fill: white;
 		}
 		.outline {
 			stroke-width: 8px;
 		}
 		.inner {
-			fill: white;
 			stroke-width: 4px;
 		}
 		.message {
 			text-anchor: middle;
 			font-size: 12px;
 		}
+		.title {
+			text-anchor: middle;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.title-container {
+			stroke-width: 1px;
+		}
 	</style>
 	<g>
 		<animateTransform attributeName="transform" type="rotate" from="0 128 128" to="360 128 128" dur="20s" repeatCount="indefinite" />
-		<rect class="inner" width="128" height="128" x="64" y="64"/>
+		<rect class="inner" width="128" height="128" x="64" y="64" />
 		<circle class="orb" r="32" cx="128" cy="64" />
 		<circle class="orb" r="32" cx="192" cy="128" />
 		<circle class="orb" r="32" cx="64" cy="128" />
@@ -36,4 +49,6 @@
 		<text class="message" x="128" y="195" transform="rotate(180 128 192)">App</text>
 	</g>
 	<circle class="outline" cx="128" cy="128" r="120" />
+	<rect class="title-container" width="80" height="22" x="88" y="116" rx="1" ry="1"/>
+	<text class="title"x="128" y="132">implexus</text>
 </svg>
