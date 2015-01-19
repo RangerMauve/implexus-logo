@@ -1,26 +1,26 @@
-<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" width="256" height="256">
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 256 256" width="512" height="512">
 	<style type="text/css">
 		text {
 			font-family: Helvetica;
+			fill: black;
 		}
-		.orb,
-		.outline,
+		.orb-outline,
 		.inner,
 		.title-container {
 			stroke: black;
 		}
 		.orb,
-		.inner,
-		.title-container,
-		.outline {
+		.title-container {
 			fill: white;
 		}
-		.outline {
-			stroke-width: 8px;
+		.orb-outline {
+			stroke-width: 2px;
+			fill: none;
 		}
-		.inner,
-		.orb-main {
+		.inner {
+			fill: none;
 			stroke-width: 4px;
+			stroke-dasharray: 8px;
 		}
 		.message {
 			text-anchor: middle;
@@ -35,18 +35,37 @@
 			stroke-width: 1px;
 		}
 	</style>
-	<circle class="outline" cx="128" cy="128" r="120" />
+	<defs>
+		<clipPath id="orb_outline">
+			<circle r="32" />
+		</clipPath>
+		<g id="orb" transform="translate(128 48)">
+			<circle class="orb" r="32" />
+			<circle class="orb orb-outline" r="16" cy="32" clip-path="url(#orb_outline)" />
+			<circle class="orb-outline" r="32" />
+		</g>
+	</defs>
 	<g>
-		<animateTransform attributeName="transform" type="rotate" from="0 128 128" to="360 128 128" dur="20s" repeatCount="indefinite" />
-		<rect class="inner" width="128" height="128" x="64" y="64" transform="rotate(11.12 128 128)" />
-		<circle class="orb orb-main" r="32" cx="128" cy="64" />
-		<circle class="orb" r="32" cx="192" cy="128" />
-		<circle class="orb" r="32" cx="128" cy="192" />
-		<circle class="orb" r="32" cx="64" cy="128" />
-		<text class="message" x="128" y="67">Idea</text>
-		<text class="message" x="192" y="131" transform="rotate(90 192 128)">Graph</text>
-		<text class="message" x="128" y="195" transform="rotate(180 128 192)">Streams</text>
-		<text class="message" x="64" y="131" transform="rotate(270 64 128)">App</text>
+		<animateTransform attributeName="transform" type="rotate" from="360 128 128" to="0 128 128" dur="16s" repeatCount="indefinite" />
+		<rect class="inner" width="128" height="128" x="64" y="64" transform="rotate(45 128 128)">
+			<animate attributeName="stroke-dashoffset" from="0" to="16" dur="500ms" repeatCount="indefinite" />
+		</rect>
+		<use xlink:href="#orb" transform="rotate(0 128 128)" />
+		<use xlink:href="#orb" transform="rotate(90 128 128)" />
+		<use xlink:href="#orb" transform="rotate(180 128 128)" />
+		<use xlink:href="#orb" transform="rotate(270 128 128)" />
+		<g transform="rotate(0 128 128) translate(128 52)">
+			<text class="message" x="0" y="0">I</text>
+		</g>
+		<g transform="rotate(90 128 128) translate(128 52)">
+			<text class="message" x="0" y="0">II</text>
+		</g>
+		<g transform="rotate(180 128 128) translate(128 52)">
+			<text class="message" x="0" y="0">III</text>
+		</g>
+		<g transform="rotate(270 128 128) translate(128 52)">
+			<text class="message" x="0" y="0">IV</text>
+		</g>
 	</g>
 	<rect class="title-container" width="80" height="22" x="88" y="116" rx="1" ry="1" />
 	<text class="title" x="128" y="132">implexus</text>
